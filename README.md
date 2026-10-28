@@ -1,0 +1,2 @@
+# forever-tracker
+WoW Forever
