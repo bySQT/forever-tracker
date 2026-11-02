@@ -1,0 +1,38 @@
+# Refreshes the icon data pack once a month (ADR-017) so new items get their icons without anyone
+# remembering to do it. Needs the repository secrets BLIZZARD_CLIENT_ID and BLIZZARD_CLIENT_SECRET.
+# Belongs in the public release repository next to tools/icons-pack.mjs and data/.
+name: Icon pack
+
+on:
+  schedule:
+    - cron: "0 4 2 * *" # 2nd of every month, 04:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build data/icons.json
+        env:
+          BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
+          BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
+        run: node tools/icons-pack.mjs data
+      - name: Commit when the item list changed
+        run: |
+          git add data/icons.json data/manifest.json
+          # The version changes every run; only publish when the icons themselves changed.
+          if git diff --cached --quiet -I '"version"' -- data/icons.json; then
+            echo "No new icons."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh the icon data pack"
+          git push
