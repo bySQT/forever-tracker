@@ -1,5 +1,14 @@
 {
   "packs": {
+    "legacy": {
+      "version": "2026.10.31"
+    },
+    "dungeons": {
+      "version": "2026.10.28"
+    },
+    "rested": {
+      "version": "2026.10.28"
+    },
     "icons": {
       "version": "2026.11.02"
     }

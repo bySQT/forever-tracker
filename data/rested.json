@@ -1,0 +1,26 @@
+{
+  "version": "2026.10.28",
+  "description": "Start parameters for the offline rested XP estimate. The app calibrates them from observed values. Always display as an estimate.",
+  "params": {
+    "ratePer8hInRestArea": {
+      "value": 0.05,
+      "unit": "fraction of xpMax",
+      "status": "community",
+      "source": "Classic baseline, https://expcarry.com/wow-forever-rested-xp-guide"
+    },
+    "outsideRestAreaFactor": {
+      "value": 0.25,
+      "status": "ungeprueft",
+      "source": "Classic behaviour, not verified for Forever"
+    },
+    "capInLevels": { "value": 1.5, "status": "community", "source": "Classic baseline" },
+    "wellRestedPerRank": {
+      "value": 0.04,
+      "maxRanks": 5,
+      "appliesTo": ["rate", "cap"],
+      "status": "ungeprueft",
+      "source": "Beta data via https://classicwowforever.com/legacy/"
+    }
+  },
+  "checkedAt": "2026-10-28"
+}

@@ -1,0 +1,113 @@
+{
+  "version": "2026.10.31",
+  "description": "WoW Forever Legacy rules. Progress itself is read from the game; this file only describes the rules.",
+  "source": "https://news.blizzard.com/en-us/article/24307383/get-to-know-the-world-of-warcraft-forever-legacy-system",
+  "checkedAt": "2026-10-28",
+  "totals": {
+    "challenges": 65,
+    "pointsPerChallenge": 1,
+    "spendCapPerCharAtLaunch": 16,
+    "maxPointsSingleChar": 29,
+    "status": "bestaetigt"
+  },
+  "categories": [
+    {
+      "id": "classes",
+      "points": 27,
+      "rule": {
+        "type": "classLevel",
+        "levels": [25, 45, 60],
+        "firstTimePerClass": true
+      },
+      "classes": [
+        "DRUID",
+        "HUNTER",
+        "MAGE",
+        "PALADIN",
+        "PRIEST",
+        "ROGUE",
+        "SHAMAN",
+        "WARLOCK",
+        "WARRIOR"
+      ],
+      "status": "bestaetigt"
+    },
+    {
+      "id": "tradeskills",
+      "points": 18,
+      "rule": {
+        "type": "professionSkill",
+        "thresholds": [150, 225, 300],
+        "nonGatheringPrimaryOnly": true
+      },
+      "professions": [
+        "alchemy",
+        "blacksmithing",
+        "enchanting",
+        "engineering",
+        "leatherworking",
+        "tailoring"
+      ],
+      "status": "bestaetigt",
+      "note": "Rule confirmed by Blizzard; the list of six professions comes from beta data (community)."
+    },
+    {
+      "id": "pvp",
+      "points": 12,
+      "rule": {
+        "ranks": [3, 7, 10, 13, 14],
+        "exaltedBattlegroundReputations": 4,
+        "fieldOfHonorWeeks": [4, 7, 10]
+      },
+      "battlegroundsCommunity": [
+        "Alterac Valley",
+        "Arathi Basin",
+        "Warsong Gulch",
+        "Darkspear Islands"
+      ],
+      "status": "bestaetigt",
+      "note": "Battleground list from community source (classicwowforever.com), not named by Blizzard."
+    },
+    {
+      "id": "adventure",
+      "points": 2,
+      "rule": {
+        "items": ["exploreEntireWorldMapOneCharacter", "lordValthalakDungeonSetQuestline"]
+      },
+      "status": "bestaetigt"
+    },
+    {
+      "id": "dungeons",
+      "points": 3,
+      "rule": {
+        "type": "finalBossAllDungeonsInBracket",
+        "brackets": [
+          [15, 25],
+          [26, 45],
+          [46, 60]
+        ]
+      },
+      "dungeonsPerBracket": null,
+      "status": "bestaetigt",
+      "note": "Dungeons per bracket are NOT listed officially. Read achievement criteria from the game at launch; until then show as unknown."
+    },
+    {
+      "id": "raids",
+      "points": 3,
+      "rule": {
+        "items": ["onyxia", "hyjalSummitAll13Bosses", "barrowDeepsAll8Bosses"]
+      },
+      "availableFrom": "2026-12-09",
+      "status": "bestaetigt"
+    }
+  ],
+  "hardcore": {
+    "status": "bestaetigt",
+    "note": "Hardcore characters earn points only from challenges completed on Hardcore; Hardcore completions count for other rulesets too. PvP challenges not available on Hardcore. 12 Hardcore-specific challenges planned."
+  },
+  "achievementCategory": {
+    "id": null,
+    "status": "ungeprueft",
+    "note": "Unknown until launch: /ft debug lists the categories, the user can pick one in the app; a later pack may fill this in."
+  }
+}

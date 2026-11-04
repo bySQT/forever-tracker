@@ -1,0 +1,202 @@
+{
+  "version": "2026.10.28",
+  "description": "Dungeons with level ranges. Legacy bracket membership is unknown until read from game achievement criteria.",
+  "checkedAt": "2026-10-28",
+  "legacyBrackets": {
+    "status": "ungeprueft",
+    "members": null,
+    "note": "Read Spelunker challenge criteria from the game at launch."
+  },
+  "dungeons": [
+    {
+      "id": "hall_of_thanes",
+      "new": true,
+      "names": { "enUS": "Hall of Thanes", "deDE": "Halle der Thanen" },
+      "levels": [13, 18],
+      "status": "bestaetigt",
+      "nameStatusDe": "community",
+      "source": "Blizzard via timesaver.gg; DE name foreverchanges.pro"
+    },
+    {
+      "id": "ruins_of_lordaeron",
+      "new": true,
+      "names": { "enUS": "Ruins of Lordaeron", "deDE": "Ruinen von Lordaeron" },
+      "levels": [15, 20],
+      "status": "bestaetigt",
+      "nameStatusDe": "community",
+      "source": "Blizzard via timesaver.gg; DE name foreverchanges.pro"
+    },
+    {
+      "id": "excavation_site",
+      "new": true,
+      "names": { "enUS": "Excavation Site", "deDE": "Ausgrabungsstätte: Sumpfland" },
+      "levels": [24, 29],
+      "levelsAlt": [26, 31],
+      "status": "community",
+      "nameStatusDe": "community",
+      "note": "Blizzard 24-29 vs beta notes 26-31; sources disagree."
+    },
+    {
+      "id": "dalaran",
+      "new": true,
+      "names": { "enUS": "City of Dalaran", "deDE": "Dalaran" },
+      "levels": [28, 33],
+      "status": "bestaetigt",
+      "nameStatusDe": "community"
+    },
+    {
+      "id": "drowned_city",
+      "new": true,
+      "names": { "enUS": "The Drowned City", "deDE": "Die Versunkene Stadt" },
+      "levels": [35, 40],
+      "status": "bestaetigt",
+      "nameStatusDe": "community"
+    },
+    {
+      "id": "kroldok_stronghold",
+      "new": true,
+      "names": { "enUS": "Krol'dok Stronghold", "deDE": "Feste Krol'dok" },
+      "levels": [40, 45],
+      "status": "bestaetigt",
+      "nameStatusDe": "community"
+    },
+    {
+      "id": "alcaz_prison",
+      "new": true,
+      "names": { "enUS": "Alcaz Prison", "deDE": "Gefängnis von Alcaz" },
+      "levels": [48, 53],
+      "status": "bestaetigt",
+      "nameStatusDe": "community"
+    },
+    {
+      "id": "blackmaw_hold",
+      "new": true,
+      "names": { "enUS": "Blackmaw Hold", "deDE": "Schwarzschlundfeste" },
+      "levels": [55, 60],
+      "status": "bestaetigt",
+      "nameStatusDe": "community"
+    },
+    {
+      "id": "shapers_terrace",
+      "new": true,
+      "names": { "enUS": "Shaper's Terrace", "deDE": "Terrasse des Formers" },
+      "levels": [58, 60],
+      "status": "bestaetigt",
+      "nameStatusDe": "community"
+    },
+
+    {
+      "id": "ragefire_chasm",
+      "names": { "deDE": "Ragefireabgrund" },
+      "levels": [13, 18],
+      "status": "community",
+      "source": "Classic Era client via foreverchanges.pro"
+    },
+    {
+      "id": "wailing_caverns",
+      "names": { "deDE": "Höhlen des Wehklagens" },
+      "levels": [17, 24],
+      "status": "community"
+    },
+    {
+      "id": "deadmines",
+      "names": { "deDE": "Todesminen" },
+      "levels": [17, 26],
+      "status": "community"
+    },
+    {
+      "id": "shadowfang_keep",
+      "names": { "deDE": "Burg Shadowfang" },
+      "levels": [22, 30],
+      "status": "community"
+    },
+    {
+      "id": "blackfathom_deeps",
+      "names": { "deDE": "Blackfathom-Tiefe" },
+      "levels": [24, 32],
+      "status": "community"
+    },
+    {
+      "id": "stormwind_stockade",
+      "names": { "deDE": "Verlies von Stormwind" },
+      "levels": [24, 32],
+      "status": "community"
+    },
+    {
+      "id": "gnomeregan",
+      "names": { "deDE": "Gnomeregan" },
+      "levels": [29, 38],
+      "status": "community"
+    },
+    {
+      "id": "razorfen_kraul",
+      "names": { "deDE": "Kral von Razorfen" },
+      "levels": [29, 38],
+      "status": "community"
+    },
+    {
+      "id": "scarlet_monastery",
+      "names": { "deDE": "Scharlachrotes Kloster" },
+      "levels": [30, 46],
+      "status": "community",
+      "note": "Four wings: 30-38, 33-41, 36-44, 38-46"
+    },
+    {
+      "id": "razorfen_downs",
+      "names": { "deDE": "Hügel von Razorfen" },
+      "levels": [37, 46],
+      "status": "community"
+    },
+    { "id": "uldaman", "names": { "deDE": "Uldaman" }, "levels": [41, 51], "status": "community" },
+    {
+      "id": "zulfarrak",
+      "names": { "deDE": "Zul'Farrak" },
+      "levels": [44, 54],
+      "status": "community"
+    },
+    {
+      "id": "maraudon",
+      "names": { "deDE": "Maraudon" },
+      "levels": [46, 55],
+      "status": "community"
+    },
+    {
+      "id": "sunken_temple",
+      "names": { "deDE": "Versunkener Tempel" },
+      "levels": [50, 60],
+      "status": "community"
+    },
+    {
+      "id": "blackrock_depths",
+      "names": { "deDE": "Blackrocktiefen" },
+      "levels": [52, 60],
+      "status": "community"
+    },
+    {
+      "id": "dire_maul",
+      "names": { "deDE": "Düsterbruch" },
+      "levels": [54, 60],
+      "status": "community",
+      "note": "East 54-60, North 56-60, West 56-60"
+    },
+    {
+      "id": "blackrock_spire",
+      "names": { "deDE": "Blackrockspitze" },
+      "levels": [55, 60],
+      "status": "community",
+      "note": "Lower 55-60, Upper 59-60"
+    },
+    {
+      "id": "scholomance",
+      "names": { "deDE": "Scholomance" },
+      "levels": [58, 60],
+      "status": "community"
+    },
+    {
+      "id": "stratholme",
+      "names": { "deDE": "Stratholme" },
+      "levels": [58, 60],
+      "status": "community"
+    }
+  ]
+}
