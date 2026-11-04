@@ -1,11 +1,13 @@
-# Refreshes the icon data pack once a month (ADR-017) so new items get their icons without anyone
-# remembering to do it. Needs the repository secrets BLIZZARD_CLIENT_ID and BLIZZARD_CLIENT_SECRET.
+# Refreshes the icon data pack twice a month (ADR-017): new items get their icons without anyone
+# remembering to do it, and the pack is never older than Blizzard's API terms allow (§2(r): at
+# most 30 days; the app ignores older packs). Needs the repository secrets BLIZZARD_CLIENT_ID
+# and BLIZZARD_CLIENT_SECRET.
 # Belongs in the public release repository next to tools/icons-pack.mjs and data/.
 name: Icon pack
 
 on:
   schedule:
-    - cron: "0 4 2 * *" # 2nd of every month, 04:00 UTC
+    - cron: "0 4 1,15 * *" # 1st and 15th of every month, 04:00 UTC
   workflow_dispatch: {}
 
 permissions:
@@ -24,12 +26,13 @@ jobs:
           BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
           BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
         run: node tools/icons-pack.mjs data
-      - name: Commit when the item list changed
+      - name: Publish the refreshed pack
         run: |
           git add data/icons.json data/manifest.json
-          # The version changes every run; only publish when the icons themselves changed.
-          if git diff --cached --quiet -I '"version"' -- data/icons.json; then
-            echo "No new icons."
+          # Every run publishes a new version, even with the same icons: the version date is the
+          # age the app checks (at most 30 days).
+          if git diff --cached --quiet; then
+            echo "Nothing to publish (pack already built today)."
             exit 0
           fi
           git config user.name "github-actions[bot]"
